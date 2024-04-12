@@ -65,4 +65,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultField = getElementById('result')
 
     const buttons = document.querySelectorAll('#calcu input[type="button"]')
+
+    buttons.forEach(buttons => {
+        button.addEventListener('click,', function () {
+            const value = this.value
+
+            if (value === '=') {
+                try {
+                    resultField.value = eval(resultField.value)
+                } catch(error) {
+                    resultField.value = 'Error'
+                }
+                
+            } else if (value === 'c') {
+                resultField.value = ''
+            }else {
+                resultField.value += value
+            }
+        })
+    })
 })
