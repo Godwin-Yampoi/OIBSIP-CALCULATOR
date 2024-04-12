@@ -63,4 +63,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     const resultField = getElementById('result')
+
+    const buttons = document.querySelectorAll('#calcu input[type="button"]')
 })
